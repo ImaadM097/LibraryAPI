@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: cyan;">
+    <H1>Welcome</H1>
+    <form action="/admin/all" method="post">
+        <button type="submit">Search all books</button>
+        <input type="hidden" name="token" value= "<%= token %>" >  
+    </form>
+    <form action="/admin/find" method="post">
+        <h4>Search by id</h4>
+        <input type="text" name="qid">
+        <button type="submit">Search</button>
+        <input type="hidden" name="token" value= "<%= token %>" >  
+    </form>
+    <form action="/admin/insert" method="post">
+        <h4>Insert</h4>
+        <label>ID</label>
+        <input type="text" name="Iid">
+        <label>name</label>
+        <input type="text" name="bname">
+        <label>Author's name</label>
+        <input type="text" name="aname">
+        <button type="submit">Insert</button>
+        <input type="hidden" name="token" value= "<%= token %>" >  
+    </form>
+    <form action="/admin/update" method="post">
+        <h4>Update book with existing id</h4>
+        <label>ID</label>
+        <input type="text" name="Iid">
+        <label>name</label>
+        <input type="text" name="bname">
+        <label>Author's name</label>
+        <input type="text" name="aname">
+        <button type="submit">Update</button>
+        <input type="hidden" name="token" value= "<%= token %>" >  
+    </form>
+    <form action="/admin/login" method="get">
+        <h4>LOG OUT</h4>
+        <button type="submit">Click to logout</button>
+    </form>
+
+    
+        <h4>CREATE NEW ADMIN</h4>
+        <form action="/admin/createAdmin" method="post">
+            <label>Name</label>
+            <input type="text" name="newuname">
+            <label>Password</label>
+            <input type="password" name="newpass">
+            <button type="submit">Sign Up</button>
+        </form>
+    
+    
+</body>
+</html>
